@@ -36,7 +36,7 @@ public class Multiprocessamento extends Thread {
 			if (i % 2 == 0) {
 				try {
 					semaforo.acquire();
-					System.out.println("#"+idThread+ " Transação de BD");
+					System.out.println("#"+idThread+ " De resto 1 está fazendo transação de BD");
 					sleep(tTransacaoBd);
 				} catch (InterruptedException e1) {
 
@@ -50,7 +50,7 @@ public class Multiprocessamento extends Thread {
 			}
 
 			else {
-				System.out.println("#"+idThread+" Transação de Cálculo");
+				System.out.println("#"+idThread+" De resto 1 está fazendo transação de Cálculo");
 				try {
 					sleep(tCalculo);
 				} catch (InterruptedException e) {
@@ -73,7 +73,7 @@ public class Multiprocessamento extends Thread {
 			if (i % 2 == 0) {
 				try {
 					semaforo.acquire();
-					System.out.println("#"+idThread+" Transação de BD");
+					System.out.println("#"+idThread+" De resto 2 está fazendo Transação de BD");
 					sleep(tTransacaoBd);
 				} catch (InterruptedException e1) {
 
@@ -87,7 +87,7 @@ public class Multiprocessamento extends Thread {
 			}
 
 			else {
-				System.out.println("#"+idThread+" Transação de Cálculo");
+				System.out.println("#"+idThread+" De resto 2 está fazendo transação de Cálculo");
 				try {
 					sleep(tCalculo);
 				} catch (InterruptedException e) {
@@ -110,7 +110,7 @@ public class Multiprocessamento extends Thread {
 			if (i % 2 == 0) {
 				try {
 					semaforo.acquire();
-					System.out.println("#"+idThread+" Transação de BD");
+					System.out.println("#"+idThread+" De resto 0 está fazendo Transação de BD");
 					sleep(tTransacaoBd);
 				} catch (InterruptedException e1) {
 
@@ -124,7 +124,7 @@ public class Multiprocessamento extends Thread {
 			}
 
 			else {
-				System.out.println("#"+idThread+" Transação de Cálculo");
+				System.out.println("#"+idThread+" De resto 0 está fazendo transação de Cálculo");
 				try {
 					sleep(tCalculo);
 				} catch (InterruptedException e) {
